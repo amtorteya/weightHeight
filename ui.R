@@ -1,7 +1,9 @@
 library(shiny)
 
 shinyUI(fluidPage(
-  titlePanel("Children's Weight and Height"),
+  titlePanel(h4(HTML("This chart will show you whether your kid has a healthy weight and/or height<br>
+                     Please define all parameters in the sidebar."))
+             ),
   sidebarLayout(
     sidebarPanel(
       radioButtons("sex",
@@ -24,7 +26,7 @@ shinyUI(fluidPage(
        width=2
     ),
     mainPanel(
-       plotOutput("plot",height=700),
+     plotOutput("plot",height=700),
        width=10
     )
   )
